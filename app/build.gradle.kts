@@ -3,7 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
 
-
+    id("com.android.application")
     id("com.google.gms.google-services")
 }
 
@@ -14,7 +14,6 @@ android {
     defaultConfig {
         applicationId = "com.example.login"
         minSdk = 27
-        //noinspection OldTargetApi
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
@@ -44,17 +43,11 @@ android {
 }
 
 dependencies {
+    val nav_version = "2.9.0"
 
-    implementation(libs.firebase.firestore.ktx) // ¡AGREGA ESTA LÍNEA para Firestore!
+    implementation("androidx.navigation:navigation-compose:$nav_version")
 
-    implementation(platform(libs.firebase.bom))
-    implementation(libs.firebase.analytics)
-
-
-
-    implementation(libs.androidx.navigation.compose)
-
-    implementation(libs.androidx.constraintlayout.compose)
+    implementation("androidx.constraintlayout:constraintlayout-compose:1.1.0-beta01")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
