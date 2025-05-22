@@ -44,6 +44,9 @@ android {
 }
 
 dependencies {
+
+    implementation(libs.firebase.firestore.ktx) // ¡AGREGA ESTA LÍNEA para Firestore!
+
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.analytics)
 
