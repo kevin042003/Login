@@ -201,6 +201,7 @@ fun PasswordField(password: String, onPasswordChange: (String) -> Unit, modifier
             focusedIndicatorColor = Color.Transparent,
             unfocusedIndicatorColor = Color.Transparent
         ),
+
         label = {
             Icon(
                 imageVector = Icons.Default.Search,
